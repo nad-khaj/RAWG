@@ -1,5 +1,5 @@
-import { HStack, Icon} from "@chakra-ui/react";
-import { Platform } from "../hooks/useGames";
+import { HStack, Icon } from "@chakra-ui/react";
+import { Platform } from "../entities/Platform";
 import { IconType } from "react-icons";
 import { BsGlobe } from "react-icons/bs";
 import {
@@ -31,7 +31,7 @@ const PlatformIconList = ({ platforms }: Props) => {
   return (
     <HStack>
       {platforms.map((platform) => (
-        <Icon as={iconMap[platform.slug]} key = {platform.id}></Icon>
+        <Icon as={iconMap[platform.slug]} key={platform.id}></Icon>
       ))}
     </HStack>
   );
